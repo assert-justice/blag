@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% load markdown_extras %}
+
+{% block content %}
+    <article class="post">
+        <h2>{{ post.title }}</h2>
+        {{ post.text|markdown|safe }}
+        {% if post.published_date %}
+            <time class="date">
+                Published on {{ post.published_date }} by {{post.author}}
+            </time>
+        {% endif %}
+    </article>
+{% endblock %}

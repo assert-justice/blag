@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spain Travel Blag</title>
+    </head>
+    <body>
+        <header class="page-header">
+          <div class="container">
+              <h1><a href="/">Spain Travel Blag</a></h1>
+          </div>
+        </header>
+        <main class="container">
+            <div class="row">
+                <div class="col">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
